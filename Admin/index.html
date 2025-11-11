@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantamdev Admin — Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+    <div class="sidebar-overlay"></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            
+            <span class="brand-name">Quantamdev</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-item active"><i class="fa fa-chart-line"></i><span>Dashboard</span></a>
+            <a href="projects.html" class="nav-item"><i class="fa fa-briefcase"></i><span>Projects</span></a>
+            <a href="clients.html" class="nav-item"><i class="fa fa-handshake"></i><span>Clients</span></a>
+            <a href="team.html" class="nav-item"><i class="fa fa-users"></i><span>Team</span></a>
+            <a href="reports.html" class="nav-item"><i class="fa fa-file-alt"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-item"><i class="fa fa-cog"></i><span>Settings</span></a>
+            <a href="logout.html" class="nav-item"><i class="fa fa-sign-out-alt"></i><span>Logout</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <button id="collapseBtn" class="icon-btn"><i class="fa fa-angle-left"></i></button>
+            <button id="themeToggle" class="icon-btn" title="Toggle theme"><i class="fa fa-moon"></i></button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="top-left">
+                <button id="mobileMenuBtn" class="icon-btn"><i class="fa fa-bars"></i></button>
+                <h1>Dashboard Control Panel</h1>
+            </div>
+            <div class="top-right">
+                <div class="search">
+                    <input type="search" placeholder="Search...">
+                    <button class="icon-btn"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="icons">
+                    <div class="dropdown">
+                        <button class="icon-btn"><i class="fa fa-bell"></i></button>
+                        <div class="dropdown-menu hidden" id="notifMenu">
+                            <div class="dropdown-item">New user signed up</div>
+                            <div class="dropdown-item">Project "Apollo" updated</div>
+                            <div class="dropdown-item">Server usage at 78%</div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMwRTk4N0UiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwIDEwQzEyLjIwOTEgMTAgMTQgOC4yMDkxIDEwIDEwQzEwIDcuNzkwODYgMTEuNzkwOSA2IDE0IDZDMTYuMjA5MSA2IDE4IDcuNzkwODYgMTggMTBDMTggMTIuMjA5MSAxNi4yMDkxIDE0IDE0IDE0QzExLjc5MDkgMTQgMTAgMTIuMjA5MSAxMCAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEMxMCAxMi4yMDkxIDcuNzkwODYgMTQgNS42NjY2NyAxNEMzLjQ3NTYxIDE0IDEuNjY2NjcgMTIuMjA5MSAxLjY2NjY3IDEwQzEuNjY2NjcgNy43OTA4NiAzLjQ3NTYxIDYgNS42NjY2NyA2QzcuNzkwODYgNiAxMCA3Ljc5MDg2IDEwIDEwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="Avatar" class="avatar">
+                        <div class="user-menu hidden" id="userMenu">
+                            <a href="settings.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="logout.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="card stat-card">
+                    <div class="stat-title">Active Projects</div>
+                    <div class="stat-value">12</div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-title">Clients</div>
+                    <div class="stat-value">34</div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-title">Revenue</div>
+                    <div class="stat-value">$42,300</div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-title">Open Tasks</div>
+                    <div class="stat-value">18</div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-grid">
+                <div class="card chart-card">
+                    <h3>Monthly Revenue & New Projects</h3>
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Service Mix</h3>
+                    <div class="chart-container">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panels -->
+            <div class="panels-grid">
+                <div class="card">
+                    <h3>Notifications</h3>
+                    <ul class="list">
+                        <li>Deployment scheduled at 3:00 PM</li>
+                        <li>New proposal from Acme Co.</li>
+                        <li>Backups completed successfully</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Ongoing Projects</h3>
+                    <ul class="list">
+                        <li>Apollo — 60% complete</li>
+                        <li>Orion — 45% complete</li>
+                        <li>Gemini — 80% complete</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Quick Actions</h3>
+                    <div class="actions">
+                        <button class="btn primary">New Project</button>
+                        <button class="btn">Add Client</button>
+                        <button class="btn">Invite Team</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Team Status</h3>
+                    <ul class="list">
+                        <li>Priya — Online</li>
+                        <li>Rahul — Busy</li>
+                        <li>Anita — Away</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rightbar -->
+        <aside class="rightbar">
+            <div class="card">
+                <h4>Notifications</h4>
+                <ul class="list small">
+                    <li>New invoice #342</li>
+                    <li>Meeting at 2:00 PM</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Team Online</h4>
+                <ul class="list small">
+                    <li>Priya</li>
+                    <li>Rahul</li>
+                    <li>Anita</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

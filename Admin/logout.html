@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantamdev Admin — Logout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="logout">
+    <!-- Centered Logout Card -->
+    <div class="centered-logout">
+        <div class="card logout-card">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <h1 style="color: #0E987E;">Quantamdev</h1>
+                <h2>Logout Confirmation</h2>
+            </div>
+            
+            <p style="text-align: center; color: var(--muted); margin-bottom: 32px;">
+                Are you sure you want to logout from the Quantamdev admin panel?
+            </p>
+
+            <div class="actions" style="justify-content: center; gap: 16px;">
+                <a href="index.html" class="btn" style="min-width: 120px;">Cancel</a>
+                <button class="btn primary" id="confirmLogout" style="min-width: 120px;">Yes, Logout</button>
+            </div>
+
+            <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.1); text-align: center;">
+                <p class="small text-muted">
+                    <i class="fa fa-info-circle"></i> 
+                    You will be redirected to the login page
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const confirmLogout = document.getElementById('confirmLogout');
+            
+            confirmLogout.addEventListener('click', function() {
+                // Show loading state
+                this.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Logging out...';
+                this.disabled = true;
+                
+                // Simulate logout process
+                setTimeout(function() {
+                    alert('You have been successfully logged out!');
+                    window.location.href = 'index.html';
+                }, 1500);
+            });
+
+            // Theme persistence for logout page
+            const savedTheme = localStorage.getItem('qd-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> QuantumDev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<style>
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #0E987E; /* theme green */
+  color: #fff;
+}
+.hero h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+.hero .changing-text {
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  min-width: 250px;
+  color: #fff; /* white text */
+}
+.fade-text {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fadeWords 12s infinite;
+}
+.fade-text:nth-child(1) { animation-delay: 0s; }
+.fade-text:nth-child(2) { animation-delay: 3s; }
+.fade-text:nth-child(3) { animation-delay: 6s; }
+.fade-text:nth-child(4) { animation-delay: 9s; }
+@keyframes fadeWords {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  25% { opacity: 1; }
+  35% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 0; }
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #0E987E;
+}
+
+/* Why Choose Us */
+.why-choose {
+  padding: 60px 20px;
+}
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.why-card {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s;
+  text-align: center;
+}
+.why-card:hover {
+  transform: translateY(-10px);
+}
+.why-card i {
+  font-size: 40px;
+  color: #0E987E;
+  margin-bottom: 15px;
+}
+
+/* Journey Timeline */
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #0E987E;
+}
+.timeline .event {
+  width: 45%;
+  padding: 20px;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+.timeline .event.left {
+  left: 0;
+}
+.timeline .event.right {
+  left: 55%;
+}
+.timeline .event h4 {
+  color: #0E987E;
+  margin-bottom: 10px;
+}
+.timeline .event::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #0E987E;
+}
+.timeline .event.left::before {
+  right: -35px;
+}
+.timeline .event.right::before {
+  left: -35px;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f9f9f9;
+  padding: 60px 20px;
+}
+.testimonial-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testimonial-card {
+  flex: 1 1 280px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.4s;
+}
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+}
+
+/* Counters */
+.counters {
+  background: #0E987E;
+  color: #fff;
+  padding: 40px 10px;
+  text-align: center;
+}
+.counters .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.counter-box {
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;     
+  height: 100%;            
+}
+
+.counter-box i {
+  font-size: 40px;          
+  margin-bottom: 10px;      
+  color: white;             
+}
+
+.counter-box h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: white;           
+}
+
+.counter-box p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: white;             
+}
+
+.counter-number {
+  font-size: 50px;
+  font-weight: bold;
+}
+.counter-text{
+	font-size: 25px;
+	text-align: center;
+	
+}
+
+/* Our Team */
+.team-section {
+  padding: 60px 20px;
+  background: #efefef;
+}
+.team-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.team-member img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+.team-member:hover img {
+  transform: scale(1.05);
+}
+.team-info {
+  margin-top: 15px;
+}
+.team-info h4 {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #0E987E;
+}
+.team-info span {
+  color: #555;
+  font-size: 14px;
+  display: block;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s;
+}
+.team-member:hover .team-info span {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+  <!-- Header -->
+  <header>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+        </div>
+        <div class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li> 
+            <li class="active"><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>We are 
+      <span class="changing-text">
+        <span class="fade-text">Creative</span>
+        <span class="fade-text">Passionate</span>
+        <span class="fade-text">Professional</span>
+        <span class="fade-text">Awesome Team</span>
+      </span>
+    </h2>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose container">
+    <h3 class="section-title">Why Choose Us?</h3>
+    <div class="why-cards">
+      <div class="why-card">
+        <i class="fa fa-lightbulb-o"></i>
+        <h4>Innovative Solutions</h4>
+        <p>We craft modern solutions that bring real business growth.</p>
+      </div>
+      <div class="why-card">
+        <i class="fa fa-users"></i>
+        <h4>Dedicated Team</h4>
+        <p>Our team of experts work hand-in-hand with clients.</p>
+      </div>
+      <div class="why-card">
+        <i class="fa fa-cogs"></i>
+        <h4>End-to-End Support</h4>
+        <p>We don’t just deliver — we maintain, support & scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section class="container">
+    <h3 class="section-title">Our Journey</h3>
+    <div class="timeline">
+      <div class="event left"><h4>2015</h4><p>Company founded with a vision to innovate.</p></div>
+      <div class="event right"><h4>2017</h4><p>Expanded globally with first international clients.</p></div>
+      <div class="event left"><h4>2020</h4><p>Launched AI-powered products for businesses.</p></div>
+      <div class="event right"><h4>2023</h4><p>Recognized as top startup delivering scalable solutions.</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h3 class="section-title">What Clients Say</h3>
+    <div class="testimonial-row">
+      <div class="testimonial-card">
+        
+        <p>"Amazing team! They delivered ahead of schedule with great quality."</p>
+        <strong>- Rahul Mehta</strong>
+      </div>
+      <div class="testimonial-card">
+        
+        <p>"Professional and creative. Understood our requirements perfectly."</p>
+        <strong>- Sneha Kapoor</strong>
+      </div>
+      <div class="testimonial-card">
+        
+        <p>"We got more than what we expected. Truly impressive work!"</p>
+        <strong>- David Johnson</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <section class="counters">
+    <div class="row">
+      <div class="counter-box">
+        <div class="counter-number">250+</div>
+		<br>
+        <p class="counter-text"><b>Projects Completed</b></p>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number">150+</div>
+		<br>
+        <p class="counter-text"><b>Satisfied Clients</b></p>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number">20+</div>
+		<br>
+        <p class="counter-text"><b>Countries Served</b></p>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number">10+</div>
+		<br>
+        <p class="counter-text"><b>Awards Won</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="team-section container">
+    <h1 class="section-title">Our Team</h1>
+	<br>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="team-member">
+          <img src="img/team1.jpg" alt="">
+          <div class="team-info">
+            <h4>John Doe</h4>
+            <span>UI/UX Specialist – Turning ideas into designs.</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="team-member">
+          <img src="img/team2.jpg" alt="">
+          <div class="team-info">
+            <h4>Jennifer</h4>
+            <span>Backend Wizard – Expert in scalable systems.</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="team-member">
+          <img src="img/team3.jpg" alt="">
+          <div class="team-info">
+            <h4>Christean</h4>
+            <span>Visionary leader – Driving innovation forward.</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="team-member">
+          <img src="img/team4.jpg" alt="">
+          <div class="team-info">
+            <h4>Kerinele Rase</h4>
+            <span>Operations master – Ensuring seamless delivery.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Our Contact</h5>
+            <address>
+            <strong>Target company Inc</strong><br>
+            JC Main Road, Near Silnile tower<br>
+             Pin-21542 NewYork US.</address>
+            <p><i class="icon-phone"></i> (123) 456-789 <br>
+              <i class="icon-envelope-alt"></i> email@domainname.com</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Quick Links</h5>
+            <ul class="link-list">
+              <li><a href="#">Latest Events</a></li>
+              <li><a href="#">Terms and conditions</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Latest posts</h5>
+            <ul class="link-list">
+              <li><a href="#">How to Choose the Right Theme for Your Business</a></li>
+              <li><a href="#">Mobile-First Design Principles Explained</a></li>
+              <li><a href="#">Performance Optimization Tips for WordPress</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Recent News</h5>
+            <ul class="link-list">
+              <li><a href="#">QuantumDev Wins "Best Multipurpose Theme 2025" Award</a></li>
+              <li><a href="#">QuantumDev at WordCamp Europe 2025</a></li>
+              <li><a href="#">New E-commerce Module Added to QuantumDev</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6"><p>&copy; Dhruv Chavada 2025 All right reserved.</p></div>
+          <div class="col-lg-6">
+            <ul class="social-network">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

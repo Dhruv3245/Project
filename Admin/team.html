@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantamdev Admin — Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="team">
+    <div class="sidebar-overlay"></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            
+            <span class="brand-name">Quantamdev</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-item"><i class="fa fa-chart-line"></i><span>Dashboard</span></a>
+            <a href="projects.html" class="nav-item"><i class="fa fa-briefcase"></i><span>Projects</span></a>
+            <a href="clients.html" class="nav-item"><i class="fa fa-handshake"></i><span>Clients</span></a>
+            <a href="team.html" class="nav-item active"><i class="fa fa-users"></i><span>Team</span></a>
+            <a href="reports.html" class="nav-item"><i class="fa fa-file-alt"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-item"><i class="fa fa-cog"></i><span>Settings</span></a>
+            <a href="logout.html" class="nav-item"><i class="fa fa-sign-out-alt"></i><span>Logout</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <button id="collapseBtn" class="icon-btn"><i class="fa fa-angle-left"></i></button>
+            <button id="themeToggle" class="icon-btn" title="Toggle theme"><i class="fa fa-moon"></i></button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="top-left">
+                <button id="mobileMenuBtn" class="icon-btn"><i class="fa fa-bars"></i></button>
+                <h1>Team Control Panel</h1>
+            </div>
+            <div class="top-right">
+                <div class="search">
+                    <input type="search" placeholder="Search team...">
+                    <button class="icon-btn"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="icons">
+                    <div class="dropdown">
+                        <button class="icon-btn"><i class="fa fa-bell"></i></button>
+                        <div class="dropdown-menu hidden" id="notifMenu">
+                            <div class="dropdown-item">Standup meeting at 10 AM</div>
+                            <div class="dropdown-item">New team member onboarded</div>
+                            <div class="dropdown-item">Team lunch scheduled</div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMwRTk4N0UiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwIDEwQzEyLjIwOTEgMTAgMTQgOC4yMDkxIDEwIDEwQzEwIDcuNzkwODYgMTEuNzkwOSA2IDE0IDZDMTYuMjA5MSA2IDE4IDcuNzkwODYgMTggMTBDMTggMTIuMjA5MSAxNi4yMDkxIDE0IDE0IDE0QzExLjc5MDkgMTQgMTAgMTIuMjA5MSAxMCAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEMxMCAxMi4yMDkxIDcuNzkwODYgMTQgNS42NjY2NyAxNEMzLjQ3NTYxIDE0IDEuNjY2NjcgMTIuMjA5MSAxLjY2NjY3IDEwQzEuNjY2NjcgNy43OTA4NiAzLjQ3NTYxIDYgNS42NjY2NyA2QzcuNzkwODYgNiAxMCA3Ljc5MDg2IDEwIDEwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="Avatar" class="avatar">
+                        <div class="user-menu hidden" id="userMenu">
+                            <a href="settings.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="logout.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <!-- Team Grid -->
+            <div class="team-grid">
+                <div class="card member-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiMwRTk4N0UiLz4KPHN2ZyB4PSIyMCIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwIDEwQzEyLjIwOTEgMTAgMTQgOC4yMDkxIDEwIDEwQzEwIDcuNzkwODYgMTEuNzkwOSA2IDE0IDZDMTYuMjA5MSA2IDE4IDcuNzkwODYgMTggMTBDMTggMTIuMjA5MSAxNi4yMDkxIDE0IDE0IDE0QzExLjc5MDkgMTQgMTAgMTIuMjA5MSAxMCAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEMxMCAxMi4yMDkxIDcuNzkwODYgMTQgNS42NjY2NyAxNEMzLjQ3NTYxIDE0IDEuNjY2NjcgMTIuMjA5MSAxLjY2NjY3IDEwQzEuNjY2NjcgNy43OTA4NiAzLjQ3NTYxIDYgNS42NjY2NyA2QzcuNzkwODYgNiAxMCA3Ljc5MDg2IDEwIDEwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=" class="member-avatar">
+                    <h4>Priya Patel</h4>
+                    <p>Project Manager</p>
+                    <span class="status online">Online</span>
+                    <div class="actions" style="margin-top: 16px;">
+                        <button class="btn">Message</button>
+                        <button class="btn primary">Profile</button>
+                    </div>
+                </div>
+                <div class="card member-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiMwRTk4N0UiLz4KPHN2ZyB4PSIyMCIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwIDEwQzEyLjIwOTEgMTAgMTQgOC4yMDkxIDEwIDEwQzEwIDcuNzkwODYgMTEuNzkwOSA2IDE0IDZDMTYuMjA5MSA2IDE4IDcuNzkwODYgMTggMTBDMTggMTIuMjA5MSAxNi4yMDkxIDE0IDE0IDE0QzExLjc5MDkgMTQgMTAgMTIuMjA5MSAxMCAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEMxMCAxMi4yMDkxIDcuNzkwODYgMTQgNS42NjY2NyAxNEMzLjQ3NTYxIDE0IDEuNjY2NjcgMTIuMjA5MSAxLjY2NjY3IDEwQzEuNjY2NjcgNy43OTA4NiAzLjQ3NTYxIDYgNS42NjY2NyA2QzcuNzkwODYgNiAxMCA3Ljc5MDg2IDEwIDEwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=" class="member-avatar">
+                    <h4>Rahul Sharma</h4>
+                    <p>Senior Developer</p>
+                    <span class="status busy">Busy</span>
+                    <div class="actions" style="margin-top: 16px;">
+                        <button class="btn">Message</button>
+                        <button class="btn primary">Profile</button>
+                    </div>
+                </div>
+                <div class="card member-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiMwRTk4N0UiLz4KPHN2ZyB4PSIyMCIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwIDEwQzEyLjIwOTEgMTAgMTQgOC4yMDkxIDEwIDEwQzEwIDcuNzkwODYgMTEuNzkwOSA2IDE0IDZDMTYuMjA5MSA2IDE4IDcuNzkwODYgMTggMTBDMTggMTIuMjA5MSAxNi4yMDkxIDE0IDE0IDE0QzExLjc5MDkgMTQgMTAgMTIuMjA5MSAxMCAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEMxMCAxMi4yMDkxIDcuNzkwODYgMTQgNS42NjY2NyAxNEMzLjQ3NTYxIDE0IDEuNjY2NjcgMTIuMjA5MSAxLjY2NjY3IDEwQzEuNjY2NjcgNy43OTA4NiAzLjQ3NTYxIDYgNS42NjY2NyA2QzcuNzkwODYgNiAxMCA3Ljc5MDg2IDEwIDEwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=" class="member-avatar">
+                    <h4>Anita Desai</h4>
+                    <p>UI/UX Designer</p>
+                    <span class="status away">Away</span>
+                    <div class="actions" style="margin-top: 16px;">
+                        <button class="btn">Message</button>
+                        <button class="btn primary">Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-grid">
+                <div class="card chart-card">
+                    <h3>Productivity</h3>
+                    <div class="chart-container">
+                        <canvas id="teamBar"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Team Overview</h3>
+                    <ul class="list small">
+                        <li>Total Members: 8</li>
+                        <li>Active Projects: 12</li>
+                        <li>Avg. Productivity: 78%</li>
+                        <li>Upcoming Leaves: 2</li>
+                    </ul>
+                    <div style="margin-top: 16px;">
+                        <h4>Upcoming Events</h4>
+                        <ul class="list small">
+                            <li>Team Meeting - Tomorrow 10 AM</li>
+                            <li>Project Review - Friday 2 PM</li>
+                            <li>Training Session - Next Week</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rightbar -->
+        <aside class="rightbar">
+            <div class="card">
+                <h4>Notifications</h4>
+                <ul class="list small">
+                    <li>Standup meeting at 10 AM</li>
+                    <li>New team member onboarded</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Team Status</h4>
+                <ul class="list small">
+                    <li>3 members online</li>
+                    <li>2 in meetings</li>
+                    <li>1 on leave</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

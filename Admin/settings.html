@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantamdev Admin — Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="settings">
+    <div class="sidebar-overlay"></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            
+            <span class="brand-name">Quantamdev</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-item"><i class="fa fa-chart-line"></i><span>Dashboard</span></a>
+            <a href="projects.html" class="nav-item"><i class="fa fa-briefcase"></i><span>Projects</span></a>
+            <a href="clients.html" class="nav-item"><i class="fa fa-handshake"></i><span>Clients</span></a>
+            <a href="team.html" class="nav-item"><i class="fa fa-users"></i><span>Team</span></a>
+            <a href="reports.html" class="nav-item"><i class="fa fa-file-alt"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-item active"><i class="fa fa-cog"></i><span>Settings</span></a>
+            <a href="logout.html" class="nav-item"><i class="fa fa-sign-out-alt"></i><span>Logout</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <button id="collapseBtn" class="icon-btn"><i class="fa fa-angle-left"></i></button>
+            <button id="themeToggle" class="icon-btn" title="Toggle theme"><i class="fa fa-moon"></i></button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="top-left">
+                <button id="mobileMenuBtn" class="icon-btn"><i class="fa fa-bars"></i></button>
+                <h1>Settings Control Panel</h1>
+            </div>
+            <div class="top-right">
+                <div class="search">
+                    <input type="search" placeholder="Search settings...">
+                    <button class="icon-btn"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="icons">
+                    <div class="dropdown">
+                        <button class="icon-btn"><i class="fa fa-bell"></i></button>
+                        <div class="dropdown-menu hidden" id="notifMenu">
+                            <div class="dropdown-item">Settings saved recently</div>
+                            <div class="dropdown-item">Profile updated</div>
+                            <div class="dropdown-item">New features available</div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMwRTk4N0UiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwIDEwQzEyLjIwOTEgMTAgMTQgOC4yMDkxIDEwIDEwQzEwIDcuNzkwODYgMTEuNzkwOSA2IDE0IDZDMTYuMjA5MSA2IDE4IDcuNzkwODYgMTggMTBDMTggMTIuMjA5MSAxNi4yMDkxIDE0IDE0IDE0QzExLjc5MDkgMTQgMTAgMTIuMjA5MSAxMCAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEMxMCAxMi4yMDkxIDcuNzkwODYgMTQgNS42NjY2NyAxNEMzLjQ3NTYxIDE0IDEuNjY2NjcgMTIuMjA5MSAxLjY2NjY3IDEwQzEuNjY2NjcgNy43OTA4NiAzLjQ3NTYxIDYgNS42NjY2NyA2QzcuNzkwODYgNiAxMCA3Ljc5MDg2IDEwIDEwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="Avatar" class="avatar">
+                        <div class="user-menu hidden" id="userMenu">
+                            <a href="settings.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="logout.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="settings-grid">
+                <!-- Profile Settings -->
+                <div class="card">
+                    <h3>Profile Settings</h3>
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" value="Priya Patel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="priya@quantamdev.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" value="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select id="department">
+                                <option>Management</option>
+                                <option>Development</option>
+                                <option>Design</option>
+                                <option>Sales</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <select id="role">
+                                <option>Admin</option>
+                                <option>Manager</option>
+                                <option>Developer</option>
+                                <option>Designer</option>
+                            </select>
+                        </div>
+                        <button class="btn primary" type="submit">Save Profile</button>
+                    </form>
+                </div>
+
+                <!-- Preferences -->
+                <div class="card">
+                    <h3>Preferences</h3>
+                    <div class="form-group">
+                        <div class="row">
+                            <span>Enable Notifications</span>
+                            <input type="checkbox" id="notifications" checked>
+                        </div>
+                        <div class="row">
+                            <span>Compact Sidebar</span>
+                            <input type="checkbox" id="compactSidebar">
+                        </div>
+                        <div class="row">
+                            <span>Auto-save Reports</span>
+                            <input type="checkbox" id="autoSave" checked>
+                        </div>
+                        <div class="row">
+                            <span>Email Digest</span>
+                            <input type="checkbox" id="emailDigest">
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 24px;">Security</h4>
+                    <div class="form-group">
+                        <div class="row">
+                            <span>Two-Factor Authentication</span>
+                            <input type="checkbox" id="twoFactor">
+                        </div>
+                        <div class="row">
+                            <span>Session Timeout (minutes)</span>
+                            <input type="number" id="sessionTimeout" value="30" min="5" max="120">
+                        </div>
+                    </div>
+
+                    <div class="actions" style="margin-top: 24px;">
+                        <button class="btn primary">Save Preferences</button>
+                        <button class="btn">Reset to Default</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="card" style="margin-top: 24px;">
+                <h3>Account Management</h3>
+                <div class="settings-grid">
+                    <div>
+                        <h4>Change Password</h4>
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword">
+                        </div>
+                        <button class="btn primary">Update Password</button>
+                    </div>
+                    <div>
+                        <h4>Danger Zone</h4>
+                        <p class="text-muted" style="margin-bottom: 16px;">Permanently delete your account and all data.</p>
+                        <button class="btn" style="background: #ff4444; color: white; border: none;">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rightbar -->
+        <aside class="rightbar">
+            <div class="card">
+                <h4>Notifications</h4>
+                <ul class="list small">
+                    <li>Settings saved recently</li>
+                    <li>Profile updated successfully</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Team Status</h4>
+                <ul class="list small">
+                    <li>All team members active</li>
+                    <li>No pending issues</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
